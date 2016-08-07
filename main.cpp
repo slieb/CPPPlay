@@ -21,8 +21,14 @@ void playWithPrecision()
 
 	cout << "Var d is " << d << " and var i is " << i << endl;
 	double dSum = d + i;
-	int iSum = d + i;
+	int iSum = d + i;               // Compiler warning due to loss of precision
 	cout << "Sum in d form is " << dSum << " and in i form is " << iSum << endl;
+
+    cout << "Sizeof char is " << sizeof(char) << endl;              // 1 byte
+    cout << "Sizeof short is " << sizeof(short) << endl;            // 2
+    cout << "Sizeof int is " << sizeof(int) << endl;                // 4
+    cout << "Sizeof long is " << sizeof(long) << endl;              // 4
+    cout << "Sizeof long long is " << sizeof(long long) << endl;    // 8
 }
 
 void dumpVector(vector<int> theVector)
@@ -47,6 +53,7 @@ void playWithVectors()
 	cout << "The sum of vector is " << sumV << endl;
 
 	sort(v.begin(), v.end());
+    cout << "Now we'll sort it" << endl;
 	dumpVector(v);
 }
 
